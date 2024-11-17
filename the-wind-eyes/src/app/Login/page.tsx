@@ -15,11 +15,16 @@ export default function Login() {
             className={styles.input}
             placeholder="Email"
             />
+
+            
           <input
             type="password"
             className={styles.input}
             placeholder="Senha"
             />
+
+
+
           <div className={styles.buttonsDiv}>
             <Button
               label="Entrar"
@@ -27,7 +32,7 @@ export default function Login() {
               width="20rem"
               height="3rem"
               />
-            <span>OU</span>
+            <span className={styles.span}>OU</span>
             <Button
               label="Cadastrar"
               backgroundColor="#195C18"
