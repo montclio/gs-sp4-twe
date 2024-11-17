@@ -1,0 +1,43 @@
+.rankingSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .ranking {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  .Score {
+    width: 80%;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+
+  }
+  
+  .scoreBar {
+    background-color: #04ff00;
+    border-radius: 50px;
+    height: 10px; 
+    height: 1rem;
+  }
+  
+  .companie {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    width: 10%;
+  }
+  
+  .percentual {
+    color: #ffd900;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+  }
+  
