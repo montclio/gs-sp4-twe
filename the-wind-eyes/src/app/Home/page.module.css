@@ -1,0 +1,47 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 5rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.sectionGreenContent{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #3D583D; 
+    width: 100%;
+    height: auto;
+    padding: 4rem;
+    text-align: justify;
+    gap: 2rem;
+}
+
+.sectionContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: justify;
+    padding: 4rem;
+    width: 100%;
+}
+
+.tittle {
+    color: #3D583D;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+}
+
+
+
+
+
