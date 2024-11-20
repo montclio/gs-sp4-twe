@@ -1,6 +1,8 @@
 import styles from "./page.module.css";
 import leo from "../assets/leo.png"
-import Image from "next/image";
+import peter from "../assets/peter.png"
+import vitor from "../assets/vitor.png"
+
 import { DeveloperCard } from "../components/DeveloperCard/DeveloperCard";
 
 
@@ -8,22 +10,28 @@ export default function EducationalContent() {
   return (
     <body className={styles.body}>
       <main className={styles.main}>
-
         <section className={styles.devSection}>
-
-
+        <DeveloperCard
+                      name="Vitor Gomes"
+                      rm="558244"
+                      imageSrc={vitor}
+                      linkedinUrl="https://www.linkedin.com/in/vitor-gomes-martins-90a045280/" 
+                      gitUrl="https://github.com/vitor4818"      />
 
         <DeveloperCard
-        name="Vitor Gomes"
-        rm="558244"
-        imageSrc={leo}
-        linkedinUrl="https://www.linkedin.com/in/vitor-gomes-martins-90a045280/"
-      />
+                      name="Pedro Lima"
+                      rm="558243"
+                      imageSrc={peter}
+                      linkedinUrl="https://www.linkedin.com/in/pedro-henrique-lima-939b08286/" 
+                      gitUrl="https://github.com/30lima"     />
 
-
-
+        <DeveloperCard
+                      name="Leonardo Pimentel"
+                      rm="557541"
+                      imageSrc={leo}
+                      linkedinUrl="https://www.linkedin.com/in/leonardo-pimentel-0a9773273/"
+                      gitUrl="https://github.com/Leonardo-dev-br"      />
         </section>
-
       </main>
     </body>
   )

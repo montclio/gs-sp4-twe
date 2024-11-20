@@ -2,11 +2,9 @@
     background-color: #314431; 
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 10rem;
     height: 100vh;
 }
-
-
 .main {
     display: flex;
     flex-direction: column;
@@ -15,31 +13,11 @@
     padding: 3rem;
 }
 
-.devStyled {
+.devSection {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+    justify-content: space-evenly;
+    width: 100%;
   }
-  
-  .link {
-    text-decoration: none;
-    font-style: italic;
-    color: #d6d6d6;
-  }
-  
-  
-  .p {
-    width: 55rem;
-  }
-  
-  .imgDev {
-    width: 20rem;
-  }
-  .description{
-    color: #ffffff;
-    font-family: "Bebas Neue", sans-serif;
-  }
+ 
   
 

@@ -13,6 +13,7 @@ export function DeveloperCard({ name, rm, imageSrc, linkedinUrl, gitUrl }) {
           Linkedin
         </a>
       </h2>
+      
       <h2 className={styles.description}>
         <a className={styles.link} href={gitUrl} target="_blank" rel="noopener noreferrer">
           Github
