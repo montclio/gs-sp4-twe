@@ -1,0 +1,21 @@
+.devStyled {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+  
+.link {
+    text-decoration: none;
+    color: #4d8105;
+}
+
+.imgDev {
+    width: 20rem;
+}
+
+.description {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+}
