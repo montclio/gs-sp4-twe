@@ -2,7 +2,7 @@ import { Button } from "../components/Button/Button";
 import Input from "../components/Input/Input";
 import styles from "./page.module.css";
 
-export default function Login() {
+export default function SignUp() {
   return (
     <body className={styles.body}>
       

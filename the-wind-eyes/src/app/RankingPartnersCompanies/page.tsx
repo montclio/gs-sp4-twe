@@ -1,7 +1,7 @@
 import RankingCard from "../components/RankingCard/RankingCard";
 import styles from "./page.module.css";
 
-export default function Login() {
+export default function RankingPartnersCompanies() {
   return (
     <body className={styles.body}>
       <main className={styles.main}>
