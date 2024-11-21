@@ -102,7 +102,7 @@ export const Header = () => {
         {item.type === "button" ? (
           renderButton(item)  
         ) : (
-          <Link href={item.href}>
+          <Link href={item.href} prefetch={true}>
             <span>{item.label}</span>
           </Link>
         )}
@@ -126,7 +126,7 @@ export const Header = () => {
         {item.type === "button" ? (
           renderButton(item)  
         ) : (
-          <Link href={item.href}>
+          <Link href={item.href} prefetch={true}>
             <span>{item.label}</span>
           </Link>
         )}

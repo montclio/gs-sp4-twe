@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    padding: 2rem;
 }
 
 
@@ -19,7 +20,7 @@
 }
 
 .tittle {
-    color: #3D583D;
+    color: white;
     font-family: "Bebas Neue", sans-serif;
     font-size: 2rem;
 }
