@@ -4,10 +4,9 @@ import styles from "./page.module.css";
 
 export default function SignUp() {
   return (
-    <body className={styles.body}>
       
-    <main>
-      <section className={styles.loginCenter}>
+    <main className={styles.main}>
+      <section className={styles.signupCenter}>
         <div className={styles.divForms}>
           <h1 className={styles.tittle}>CADASTRAR</h1>
           <Input 
@@ -48,6 +47,5 @@ export default function SignUp() {
         </div>
       </section>
     </main>
-              </body>
   );
 }

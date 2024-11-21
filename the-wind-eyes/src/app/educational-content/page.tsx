@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 
 export default function EducationalContent() {
   return (
-    <body className={styles.body}>
+      
       <main className={styles.main}>
 
         <section className={styles.sectionGreenContent}>
@@ -23,7 +23,7 @@ export default function EducationalContent() {
           title="Principais Fontes de Energia Sustentável"
           subTitle="Energia Solar"
           content="A energia solar é captada através de paineis fotovoltaicos ou sistemas de aquecimento solar. É uma fonte limpa e abundante, sendo especialmente útil em regiões com alta incidência solar. Os avanços tecnológicos têm reduzido o custo dessa tecnologia, tornando-a acessível para residências, empresas e governos."
-        />
+          />
 
         <SustainableEnergySection
           subTitle="Energia Hidrelétrica"
@@ -98,6 +98,5 @@ export default function EducationalContent() {
         </section>
 
       </main>
-    </body>
   )
 }

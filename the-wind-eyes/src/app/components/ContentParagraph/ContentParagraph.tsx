@@ -9,12 +9,14 @@ interface ContentParagraphProps {
 export const ContentParagraph: React.FC<ContentParagraphProps> = ({
   children,
   color = 'black',
-  fontSize = '1.5rem', 
+  fontSize = '1.5rem',
 }) => {
   const paragraphStyle = {
     fontFamily: '"Raleway", sans-serif',
     color,
     fontSize,
+    textAlign: 'justify',
+    padding: '1rem'
   };
 
   return <p style={paragraphStyle}>{children}</p>;

@@ -6,9 +6,8 @@ import vitor from "../assets/vitor.png"
 import { DeveloperCard } from "../components/DeveloperCard/DeveloperCard";
 
 
-export default function EducationalContent() {
+export default function About() {
   return (
-    <body className={styles.body}>
       <main className={styles.main}>
         <section className={styles.devSection}>
         <DeveloperCard
@@ -33,6 +32,5 @@ export default function EducationalContent() {
                       gitUrl="https://github.com/Leonardo-dev-br"      />
         </section>
       </main>
-    </body>
   )
 }

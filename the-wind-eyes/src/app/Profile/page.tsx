@@ -5,7 +5,6 @@ import userIcon from "../assets/userIcon.png"
 
 export default function Profile() {
   return (
-    <body className={styles.body}>
       <main className={styles.main}>
 
         <section className={styles.profileSection}>
@@ -39,6 +38,5 @@ export default function Profile() {
 
 
       </main>
-     </body>
   )
 }

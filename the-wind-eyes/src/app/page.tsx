@@ -1,8 +1,9 @@
 import { Apresentation } from './components/Apresentation/Apresentation'
 import { Button } from './components/Button/Button'
+import { ContentParagraph } from './components/ContentParagraph/ContentParagraph'
 import styles from './page.module.css'
 
-export default function Home() {
+export default function LandingPage() {
   return (
     <>
       <main className={styles.main}>
@@ -19,7 +20,7 @@ export default function Home() {
           </p>
         </Apresentation>
 
-        <Apresentation color='var(--font-color)' alignSelf='flex-end' borderRadius={{topLeft: '60px',
+        <Apresentation color='#5EDA5C' alignSelf='flex-end' borderRadius={{topLeft: '60px',
           topRight: '0px',
           bottomLeft: '60px',
           bottomRight: '0px',}}>
@@ -32,9 +33,9 @@ export default function Home() {
 
 
         <section className={styles.greenRanking}>
-        <p>
+        <ContentParagraph color='white'>
           O Ranking Verde é uma classificação que destaca empresas comprometidas com a sustentabilidade, considerando práticas ambientais responsáveis e o uso de tecnologias verdes. Ele oferece uma visão clara para consumidores e investidores sobre as organizações que contribuem para um futuro mais sustentável. Nossa análise foi baseada nos dados da empresa "nome da empresa aqui", uma fonte confiável que atualizou as informações até este ano, assegurando que o ranking reflita o cenário atual do mercado sustentável.
-          </p>
+          </ContentParagraph>
         </section>
 
   <h1>Quer saber mais?</h1>

@@ -1,29 +1,22 @@
 import { Button } from "../components/Button/Button";
+import Input from "../components/Input/Input";
 import styles from "./page.module.css";
 
 export default function Login() {
   return (
-    <body className={styles.body}>
       
-    <main>
+    <main className={styles.main}>
       <section className={styles.loginCenter}>
         <div className={styles.divForms}>
           <h1 className={styles.tittle}>ENTRAR</h1>
-          <input
-            type="text"
-            id="email"
-            className={styles.input}
-            placeholder="Email"
-            />
 
-            
-          <input
-            type="password"
-            className={styles.input}
-            placeholder="Senha"
-            />
+          <Input 
+          type="text"
+          placeholder="Email"/>
 
-
+          <Input 
+          type="password"
+          placeholder="Senha"/>
 
           <div className={styles.buttonsDiv}>
             <Button
@@ -43,6 +36,5 @@ export default function Login() {
         </div>
       </section>
     </main>
-              </body>
   );
 }

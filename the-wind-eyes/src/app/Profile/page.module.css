@@ -1,11 +1,8 @@
-.body {
-    background-color: #3D583D; 
+.main{
     display: flex;
-    flex-direction: column;
-    gap: 4rem;
+    align-items: center;
     height: 100vh;
 }
-
 
 .profileSection{
     display: flex;

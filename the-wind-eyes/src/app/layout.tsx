@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <>
       <html lang="pt-BR">
         <head>
-          <meta charset="UTF-8" />
+          <meta charSet="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <title>Quiz App</title>
           <link rel="preconnect" href="https://fonts.googleapis.com" />

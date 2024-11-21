@@ -1,17 +1,13 @@
-.body {
-    background-color: #3D583D; 
+
+
+.main{
     display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
 }
 
-.quizContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
+
   
   .questionSection {
     display: flex;

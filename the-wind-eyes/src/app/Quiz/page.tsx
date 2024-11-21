@@ -118,8 +118,8 @@ export default function Quiz() {
   };
 
   return (
-    <body className={styles.body}>
-    <div className={styles.quizContainer}>
+        <main className={styles.main}>
+    <div>
       {showScore ? (
         <div className={styles.scoreSection}>
           <h1>Quiz Finalizado!</h1>
@@ -146,6 +146,6 @@ export default function Quiz() {
         </div>
       )}
     </div>
-    </body>
+        </main>
   );
 }
