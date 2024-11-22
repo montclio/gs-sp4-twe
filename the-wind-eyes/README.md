@@ -2,7 +2,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+Primeiro, instale as depêndencias e modulos:
+
+
+```
+npm i
+
+npm install axios
+
+```
 
 ```bash
 npm run dev
@@ -25,4 +33,3 @@ Para conferir a inttegração com a API de Java, - localmente - faça os seguint
 2. Baixar as Dependências no arquivo "pom.xml"
 3. Atualizar o projeto
 4.  Executar a Classe Main
-# teste-deploy
