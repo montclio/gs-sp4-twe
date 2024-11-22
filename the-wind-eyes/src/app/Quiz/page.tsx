@@ -97,7 +97,7 @@ export default function Quiz() {
     console.log("Pergunta atual:", currentQuestionIndex);
   }, [currentQuestionIndex]); // Monitorando atualizações do estado de perguntas
 
-  const handleAnswer = (index) => {
+  const handleAnswer = (index: number) => {
     console.log("Resposta selecionada:", index);
 
     // Atualiza a pontuação se a resposta for correta

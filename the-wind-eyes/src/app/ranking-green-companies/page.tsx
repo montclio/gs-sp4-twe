@@ -18,10 +18,10 @@ export default function RankingGreenCompanies() {
         <RankingCard companie="4. Ambev" percentual="25%" scoreWidth="25%" />
 
         <Button 
-  label={"Parceiros"} 
-  backgroundColor="#34B032" 
-  onClick={() => router.push('/ranking-partners-companies')} 
-/>
+         label={"Parceiros"} 
+         backgroundColor="#34B032" 
+         onClick={() => router.push('/ranking-partners-companies')} 
+        />
 
 
       </main>
