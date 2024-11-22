@@ -1,9 +1,14 @@
 import React, { createContext, useContext, useState } from 'react';
 
+interface User {
+  nome: string;
+  email: string;
+}
+
 interface AuthContextProps {
   isAuthenticated: boolean;
-  email: string | null;
-  login: (username: string, password: string) => void;
+  user: User | null;
+  login: (user: User) => void; // Alterado para aceitar um objeto de usuário
   logout: () => void;
 }
 
@@ -11,21 +16,20 @@ const AuthContext = createContext<AuthContextProps | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [email, setEmail] = useState<string | null>(null); // Armazenando o e-mail
+  const [user, setUser] = useState<User | null>(null);
 
-  const login = (username: string, password: string) => {
-    // Aqui você pode fazer a validação do usuário e senha (futuramente, por exemplo, com uma API)
+  const login = (user: User) => {
     setIsAuthenticated(true);
-    setEmail(username); // Considerando o "username" como o e-mail
+    setUser(user); // Armazenando o objeto do usuário
   };
 
   const logout = () => {
     setIsAuthenticated(false);
-    setEmail(null); // Limpa o e-mail quando o usuário sair
+    setUser(null); // Limpando os dados do usuário ao fazer logout
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, email, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, user, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

@@ -1,18 +1,16 @@
-'use client'
-import queryString from 'query-string'; // Instale este pacote:
+'use client';
 import { useState } from "react";
 import { Button } from "../components/Button/Button";
-import Input from "../components/Input/Input";
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
 import { useAuth } from "../../../Context/AuthContext"; // Importando o contexto
+import Input from '../components/Input/Input';
 
 export default function SignUp() {
   const router = useRouter();
   const { login } = useAuth(); // Pega a função de login do AuthContext
 
   const [birthdayDate, setBirthdayDate] = useState("");
-  const [apiCep, setApiCep] = useState("");
   const [cep, setCep] = useState("");
   const [signUpEmail, setSignUpEmail] = useState("");
   const [nome, setNome] = useState("");
@@ -36,8 +34,17 @@ export default function SignUp() {
       return false;
     }
 
-    if (!birthdayDate.trim()) {
-      alert("Por favor, preencha a data de nascimento.");
+    // Validação da data de nascimento (formato DD/MM/AAAA)
+    const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;
+    if (!birthdayDate.trim() || !dateRegex.test(birthdayDate)) {
+      alert("Por favor, preencha a data de nascimento no formato DD/MM/AAAA.");
+      return false;
+    }
+
+    // Validação do CEP (com ou sem traço)
+    const cepRegex = /^\d{5}-?\d{3}$/;
+    if (!cep.trim() || !cepRegex.test(cep)) {
+      alert("Por favor, preencha o CEP corretamente (com ou sem traço).");
       return false;
     }
 
@@ -57,20 +64,18 @@ export default function SignUp() {
 
     const user = {
       nome,
+      cep,
       sobrenome,
       email: signUpEmail,
       dataDeNascimento: birthdayDate,
       senha,
     };
 
-    const params = queryString.stringify({
-      user: JSON.stringify(user),
-      cep: JSON.stringify(cep)
-    });
+    // Chama o login passando o objeto do usuário
+    login(user);
 
     alert("Cadastro realizado com sucesso!");
-    login(signUpEmail, senha); // Atualiza o contexto para marcar como logado
-    router.push(`/profile?${params}`); // Redireciona para o perfil
+    router.push("/home"); // Redireciona para o perfil sem parâmetros de URL
   };
 
   return (
@@ -100,7 +105,7 @@ export default function SignUp() {
           />
           <Input
             type="text"
-            placeholder="Data de nascimento"
+            placeholder="Data de nascimento (DD/MM/AAAA)"
             onChange={(e) => setBirthdayDate(e.target.value)}
             value={birthdayDate}
           />
@@ -123,7 +128,7 @@ export default function SignUp() {
               backgroundColor="#51E54F"
               width="20rem"
               height="3rem"
-              onClick={handleSignUp}
+              onClick={handleSignUp} // Chama handleSignUp ao clicar
             />
             <span className={styles.span}>OU</span>
             <Button

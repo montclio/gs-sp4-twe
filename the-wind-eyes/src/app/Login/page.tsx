@@ -10,16 +10,30 @@ export default function Login() {
   const router = useRouter();
   const { login } = useAuth(); // Pegando a função login do contexto
   
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState(''); // Usando email em vez de username
+  const [senha, setSenha] = useState('');
   const [error, setError] = useState('');
 
+  // Definir o CEP da Avenida Paulista (FIAP Paulista)
+  const avenidaPaulistaCep = '01311-000'; // Exemplo de CEP
+
   const handleLogin = async () => {
-    if (username === 'a' && password === 'a') {
+    // Verificando se o email e senha são válidos
+    if (email === 'exemplo@fiap.com' && senha === 'senha123') {
       try {
-        // Usando o login do contexto
-        login(username, password);
-        setError('');
+        // Criar o objeto para enviar ao AuthContext com os mesmos atributos
+        const user = {
+          nome: 'Exemplo',         // Nome de exemplo
+          cep: avenidaPaulistaCep, // CEP da Avenida Paulista
+          sobrenome: 'Usuário',    // Sobrenome de exemplo
+          email,                   // Email fornecido pelo usuário
+          dataDeNascimento: '2000-01-01', // Data de nascimento de exemplo
+          senha,                   // Senha fornecida pelo usuário
+        };
+
+        // Usando o login do contexto e passando o objeto de exemplo
+        login(user);
+        setError(''); // Limpando qualquer erro anterior
         router.push('/home');  // Redireciona após o login bem-sucedido
       } catch (error) {
         console.error('Login failed:', error);
@@ -39,31 +53,31 @@ export default function Login() {
           <Input 
             type="text"
             placeholder="Email"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
 
           <Input 
             type="password"
             placeholder="Senha"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
           />
 
           <div className={styles.buttonsDiv}>
             <Button
               label="Entrar"
               backgroundColor="#51E54F"
-              width="20rem"
+              width="10rem"
               height="3rem"
-              onClick={() => handleLogin()}
+              onClick={() => handleLogin()}  // Chama handleLogin ao clicar
             />
             {error && <p style={{ color: 'red' }}>{error}</p>}
             <span className={styles.span}>OU</span>
             <Button
               label="Cadastrar"
               backgroundColor="#195C18"
-              width="20rem"
+              width="10rem"
               height="3rem"
             />
           </div>

@@ -16,7 +16,7 @@ export const ContentParagraph: React.FC<ContentParagraphProps> = ({
     color,
     fontSize,
     textAlign: 'justify',
-    padding: '1rem'
+    padding: '0.5rem'
   };
 
   return <p style={paragraphStyle}>{children}</p>;

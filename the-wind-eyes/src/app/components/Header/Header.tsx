@@ -91,9 +91,9 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.navBar}>
-        <Link href="/">
-          <Image src={logo} alt="Logo" width={70} height={70} />
-        </Link>
+      
+          <Image src={logo} alt="Logo" width={70} height={70} className={styles.img}/>
+        
         <ul className={styles.ul}>
         {isAuthenticated ? (
   <>
