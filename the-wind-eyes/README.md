@@ -19,9 +19,9 @@ Abra [http://localhost:3000](http://localhost:3000) no Navegador para conferir o
 Para conferir a inttegração com a API de Java, - localmente - faça os seguintes passos:
 
 *IMPORTANTE: Necessário ter instalado a IDE IntelliJ para poder rodar Localmente a API
-  IntelliJ IDEA Community Edition -> https://www.jetbrains.com/idea/download/?section=windows
+  [IntelliJ IDEA Community Edition] -> (https://www.jetbrains.com/idea/download/?section=windows)
 
-1 - clonar o repositório da API -> https://github.com/montclio/gs2-java-twe.git
-2 - Baixar as Dependências no arquivo "pom.xml"
-3 - Atualizar o projeto
-4 - Executar a Classe Main
+1. Clonar o repositório da API -> (https://github.com/montclio/gs2-java-twe.git)
+2. Baixar as Dependências no arquivo "pom.xml"
+3. Atualizar o projeto
+4.  Executar a Classe Main
