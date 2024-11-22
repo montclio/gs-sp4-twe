@@ -4,13 +4,12 @@ import { Button } from "../components/Button/Button";
 import Input from "../components/Input/Input";
 import styles from "./page.module.css";
 import { useRouter } from 'next/navigation';
-import { useAuth } from '../../../Context/AuthContext'; // Importando o hook useAuth
+import { useAuth } from '../../../Context/AuthContext';
 
 export default function Login() {
   const router = useRouter();
-  const { login } = useAuth(); // Pegando a função login do contexto
-  
-  const [email, setEmail] = useState(''); // Usando email em vez de username
+  const { login } = useAuth();
+  const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [error, setError] = useState('');
 
