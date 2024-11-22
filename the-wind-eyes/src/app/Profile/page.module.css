@@ -1,0 +1,192 @@
+/* Estilos base para todas as telas */
+.main {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.profileSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #2A9F28;
+    width: 90%;
+    height: 80vh;
+    border-top-right-radius: 20rem;
+    border-bottom-right-radius: 20rem;
+}
+
+.userDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 30%;
+    background-color: #3d583da2;
+    height: auto;
+    border-radius: 25px;
+    padding: 5rem;
+}
+
+.imageDiv {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.p {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+    width: 100%;
+    height: 2rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.infoDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Extra Pequeno (XS) - Telefones Pequenos */
+@media (max-width: 575px) {
+    .main{
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .profileSection {
+        height: auto;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    .userDiv {
+        width: 80%;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    .p {
+        font-size: 0.7rem;
+        padding: 0.8rem;
+    }
+
+    .infoDiv {
+        gap: 0.5rem;
+    }
+}
+
+/* Pequeno (SM) - Telefones Médios e Tablets Pequenos */
+@media (min-width: 576px) and (max-width: 767px) {
+    .main{
+        justify-content: center;
+        align-items: center;
+    }
+    .profileSection {
+        height: auto;
+        padding: 2rem;
+        border-radius: 10px;
+    }
+
+    .userDiv {
+        width: 70%;
+        padding: 3rem;
+        gap: 1.8rem;
+    }
+
+    .p {
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+
+    .infoDiv {
+        gap: 1rem;
+    }
+}
+
+/* Médio (MD) - Tablets e Laptops */
+@media (min-width: 768px) and (max-width: 991px) {
+    .profileSection {
+        height: 80vh;
+        padding: 2.5rem;
+
+    }
+
+    .userDiv {
+        width: 60%;
+        padding: 4rem;
+        gap: 2rem;
+    }
+
+    .p {
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+
+    .infoDiv {
+        gap: 1.2rem;
+    }
+}
+
+/* Grande (LG) - Desktops Médios */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .profileSection {
+        height: 80vh;
+        padding: 3rem;
+        border-top-right-radius: 20rem;
+        border-bottom-right-radius: 20rem;
+    }
+
+    .userDiv {
+        justify-content: center;
+        width: 40%;
+        padding: 4rem;
+        gap: 2rem;  
+        height: 70vh;      
+    }
+
+    .p {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .infoDiv {
+        gap: 1.5rem;
+    }
+}
+
+/* Extra Grande (XL) - Desktops Grandes */
+@media (min-width: 1200px) {
+    .profileSection {
+        height: 80vh;
+        padding: 3rem;
+        border-top-right-radius: 20rem;
+        border-bottom-right-radius: 20rem;
+    }
+
+    .userDiv {
+        justify-content: center;
+        width: 40%;
+        padding: 4rem;
+        gap: 2rem;  
+        height: 70vh;      
+    }
+
+    .p {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .infoDiv {
+        gap: 1.5rem;
+    }
+}

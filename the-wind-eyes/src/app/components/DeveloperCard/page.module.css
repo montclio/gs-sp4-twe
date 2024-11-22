@@ -1,0 +1,95 @@
+.devStyled {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .link {
+    color: #c7c7c7;
+  }
+  
+  .imgDev {
+    width: auto;
+    max-width: 100%;
+  }
+  
+  .description {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+  }
+  
+  
+  /* Extra Pequeno (XS) - Telefones Pequenos */
+  @media (max-width: 575px) {
+    .devStyled {
+      gap: 0.5rem;
+      padding: 1rem;
+    }
+    .imgDev {
+      max-width: 80%;
+      height: 80%;
+    }
+    .description {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Pequeno (SM) - Telefones Médios e Tablets Pequenos */
+  @media (min-width: 576px) and (max-width: 767px) {
+    .devStyled {
+      gap: 1rem;
+      padding: 1.5rem;
+    }
+    .imgDev {
+      max-width: 85%;
+    }
+    .description {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Médio (MD) - Tablets e Laptops */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .devStyled {
+      gap: 1rem;
+    }
+    .imgDev {
+      max-width: 12rem;
+      height: 12rem;
+    }
+
+    .description {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Grande (LG) - Desktops Médios */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .devStyled {
+      gap: 1rem;
+    }
+    .imgDev {
+      max-width: 15rem;
+      height: 15rem;
+    }
+    .description {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Extra Grande (XL) - Desktops Grandes */
+  @media (min-width: 1200px) {
+    .devStyled {
+      gap: 1rem;
+    }
+    .imgDev {
+      max-width: 100%;
+    }
+    .description {
+      font-size: 1.8rem;
+    }
+  }
+  

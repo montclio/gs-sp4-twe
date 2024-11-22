@@ -1,0 +1,152 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+.sectionGreenContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5rem;
+    background-color: #226820;
+    width: 100%;
+    height: auto;
+    padding: 4rem;
+    gap: 2rem;
+}
+
+.sectionContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.divContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.tittle {
+    color: rgb(255, 255, 255);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+}
+
+/* Responsividade */
+
+/* Extra Pequeno (XS) - Telefones Pequenos */
+@media (max-width: 575px) {
+    .main {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .sectionGreenContent {
+        padding: 1rem;
+        gap: 1rem;
+        border-radius: 2rem;
+    }
+
+    .tittle {
+        font-size: 1.5rem;
+    }
+
+    .divContent {
+        gap: 0.3rem;
+    }
+}
+
+/* Pequeno (SM) - Telefones Médios e Tablets Pequenos */
+@media (min-width: 576px) and (max-width: 767px) {
+    .main {
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .sectionGreenContent {
+        gap: 0.5rem;
+        border-radius: 3rem;
+    }
+
+    .tittle {
+        font-size: 1.75rem;
+    }
+
+    .divContent {
+        gap: 0.4rem;
+    }
+}
+
+/* Médio (MD) - Tablets e Laptops */
+@media (min-width: 768px) and (max-width: 991px) {
+    .main {
+        padding: 18rem;
+        gap: 1.8rem;
+    }
+
+    .sectionGreenContent {
+        padding: 3.5rem;
+        gap: 1.8rem;
+        border-radius: 4rem;
+    }
+
+    .tittle {
+        font-size: 1.85rem;
+    }
+
+    .divContent {
+        gap: 0.45rem;
+    }
+}
+
+/* Grande (LG) - Desktops Médios */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .main {
+        padding: 18rem;
+        gap: 2rem;
+    }
+
+    .sectionGreenContent {
+        padding: 4rem;
+        gap: 2rem;
+        border-radius: 4.5rem;
+    }
+
+    .tittle {
+        font-size: 2rem;
+    }
+
+    .divContent {
+        gap: 0.5rem;
+    }
+}
+
+/* Extra Grande (XL) - Desktops Grandes */
+@media (min-width: 1200px) {
+    .main {
+        padding: 3rem;
+        gap: 2rem;
+    }
+
+    .sectionGreenContent {
+        padding: 4rem;
+        gap: 2rem;
+        border-radius: 5rem;
+    }
+
+    .tittle {
+        font-size: 2rem;
+    }
+
+    .divContent {
+        gap: 0.5rem;
+    }
+}

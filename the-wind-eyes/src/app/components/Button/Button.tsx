@@ -10,8 +10,8 @@ interface ButtonProps {
   backgroundColor?: string;
   borderColor?: string;
   style?: React.CSSProperties;
-  width?: string; // Adicionando largura manual
-  height?: string; // Adicionando altura manual
+  width?: string; 
+  height?: string; 
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -23,12 +23,12 @@ export const Button: React.FC<ButtonProps> = ({
   backgroundColor,
   borderColor,
   style,
-  width, // Recebe a largura
-  height, // Recebe a altura
+  width, 
+  height, 
 }) => {
   const getButtonStyle = () => {
     let baseStyle: React.CSSProperties = {
-      padding: '10px 20px',
+      padding: '0.5rem 1rem',
       borderRadius: '5px',
       border: '2px solid transparent',
       cursor: 'pointer',
@@ -38,12 +38,12 @@ export const Button: React.FC<ButtonProps> = ({
       fontFamily: 'Roboto, sans-serif',
       fontSize: '1rem',
       fontWeight: 'bold',
-      width, // Aplica a largura personalizada
-      height, // Aplica a altura personalizada
+      width, 
+      height, 
     };
 
-    if (size === 'small') baseStyle.padding = '5px 10px';
-    if (size === 'large') baseStyle.padding = '15px 30px';
+    if (size === 'small') baseStyle.padding = '0.5rem 0.6rem';
+    if (size === 'large') baseStyle.padding = '1rem 2rem';
 
     if (variant === 'outline') {
       baseStyle = {

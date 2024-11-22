@@ -1,0 +1,61 @@
+.input {
+    border-radius: 10px;
+    width: 20rem;
+    height: 3rem;
+    padding: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    border: solid 2px #195C18;
+    font-weight: bold;
+}
+
+
+/* Extra Pequeno (XS) - Telefones Pequenos */
+@media (max-width: 575px) {
+    .input {
+        width: 15rem;
+        height: 2.5rem;
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}
+
+/* Pequeno (SM) - Telefones Médios e Tablets Pequenos */
+@media (min-width: 576px) and (max-width: 767px) {
+    .input {
+        width: 18rem;
+        height: 2.8rem;
+        font-size: 0.95rem;
+        padding: 0.9rem;
+    }
+}
+
+/* Médio (MD) - Tablets e Laptops */
+@media (min-width: 768px) and (max-width: 991px) {
+    .input {
+        width: 19rem;
+        height: 3rem;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+
+/* Grande (LG) - Desktops Médios */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .input {
+        width: 20rem;
+        height: 3rem;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+
+/* Extra Grande (XL) - Desktops Grandes */
+@media (min-width: 1200px) {
+    .input {
+        width: 22rem;
+        height: 3.2rem;
+        font-size: 1.1rem;
+        padding: 1.2rem;
+    }
+}

@@ -1,0 +1,157 @@
+/* Estilos base para todas as telas */
+.rankingSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.ranking {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  gap: 3rem;
+  align-items: center;
+}
+
+.Score {
+  width: 80%;
+  background-color: #FFFFFF;
+  border-radius: 50px;
+}
+
+.scoreBar {
+  background-color: #04ff00;
+  border-radius: 50px;
+  height: 1rem;
+}
+
+.companie {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  width: 10%;
+}
+
+.percentual {
+  color: #ffd900;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+
+/* Extra Pequeno (XS) - Telefones Pequenos */
+@media (max-width: 575px) {
+  .ranking {
+      flex-direction: column;
+      gap: 2rem;
+      width: 90%;
+  }
+
+  .Score {
+      width: 100%;
+  }
+
+  .companie {
+      font-size: 0.9rem;
+      width: 100%;
+      text-align: center;
+  }
+
+  .percentual {
+      font-size: 1rem;
+      width: 100%;
+      text-align: center;
+  }
+}
+
+/* Pequeno (SM) - Telefones Médios e Tablets Pequenos */
+@media (min-width: 576px) and (max-width: 767px) {
+  .ranking {
+      flex-direction: column;
+      gap: 2rem;
+      width: 85%;
+  }
+
+  .Score {
+      width: 100%;
+  }
+
+  .companie {
+      font-size: 1rem;
+      width: 100%;
+      text-align: center;
+  }
+
+  .percentual {
+      font-size: 1.1rem;
+      width: 100%;
+      text-align: center;
+  }
+}
+
+/* Médio (MD) - Tablets e Laptops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .ranking {
+      flex-direction: row;
+      gap: 3rem;
+      width: 70%;
+  }
+
+  .Score {
+      width: 80%;
+  }
+
+  .companie {
+      font-size: 1.1rem;
+      width: 15%;
+  }
+
+  .percentual {
+      font-size: 1.2rem;
+  }
+}
+
+/* Grande (LG) - Desktops Médios */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .ranking {
+      flex-direction: row;
+      gap: 3rem;
+      width: 70%;
+  }
+
+  .Score {
+      width: 80%;
+  }
+
+  .companie {
+      font-size: 1.2rem;
+      width: 10%;
+  }
+
+  .percentual {
+      font-size: 1.3rem;
+  }
+}
+
+/* Extra Grande (XL) - Desktops Grandes */
+@media (min-width: 1200px) {
+  .ranking {
+      flex-direction: row;
+      gap: 3rem;
+      width: 70%;
+  }
+
+  .Score {
+      width: 80%;
+  }
+
+  .companie {
+      font-size: 1.3rem;
+      width: 10%;
+  }
+
+  .percentual {
+      font-size: 1.4rem;
+  }
+}
