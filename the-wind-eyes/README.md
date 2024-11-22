@@ -2,7 +2,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+Primeiro, instale as depêndencias e modulos:
+
+
+```
+npm i
+
+npm install axios
+
+```
 
 ```bash
 npm run dev

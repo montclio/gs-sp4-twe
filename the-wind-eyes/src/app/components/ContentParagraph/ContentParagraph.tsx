@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 
 interface ContentParagraphProps {
   children: React.ReactNode;
@@ -11,12 +11,12 @@ export const ContentParagraph: React.FC<ContentParagraphProps> = ({
   color = 'black',
   fontSize = '1.5rem',
 }) => {
-  const paragraphStyle = {
+  const paragraphStyle: CSSProperties = {
     fontFamily: '"Raleway", sans-serif',
     color,
     fontSize,
     textAlign: 'justify',
-    padding: '0.5rem'
+    padding: '0.5rem',
   };
 
   return <p style={paragraphStyle}>{children}</p>;

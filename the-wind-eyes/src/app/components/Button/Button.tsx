@@ -1,8 +1,11 @@
 // components/Button/Button.tsx
 import React from 'react';
 
+
+
+
 interface ButtonProps {
-  label: string;
+  label?: string;   // Torne a label opcional, pois ela será substituída por children
   onClick?: () => void;
   color?: string;
   size?: 'small' | 'medium' | 'large';
@@ -10,8 +13,9 @@ interface ButtonProps {
   backgroundColor?: string;
   borderColor?: string;
   style?: React.CSSProperties;
-  width?: string; 
-  height?: string; 
+  width?: string;
+  height?: string;
+  children?: React.ReactNode;  // Adicionando children
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -23,8 +27,9 @@ export const Button: React.FC<ButtonProps> = ({
   backgroundColor,
   borderColor,
   style,
-  width, 
-  height, 
+  width,
+  height,
+  children, // Recebe o conteúdo de children
 }) => {
   const getButtonStyle = () => {
     let baseStyle: React.CSSProperties = {
@@ -38,8 +43,8 @@ export const Button: React.FC<ButtonProps> = ({
       fontFamily: 'Roboto, sans-serif',
       fontSize: '1rem',
       fontWeight: 'bold',
-      width, 
-      height, 
+      width,
+      height,
     };
 
     if (size === 'small') baseStyle.padding = '0.5rem 0.6rem';
@@ -59,7 +64,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <button onClick={onClick} style={getButtonStyle()}>
-      {label}
+      {children || label} {/* Exibe 'children' ou 'label', se presente */}
     </button>
   );
 };

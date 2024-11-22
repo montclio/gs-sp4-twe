@@ -6,9 +6,14 @@ import { useEffect, useState } from "react";
 import { useAuth } from "../../../Context/AuthContext"; // Importando o AuthContext
 import { ContentParagraph } from "../components/ContentParagraph/ContentParagraph";
 
+// Definindo o tipo para o CEP
+type CepType = {
+  neighborhood: string;
+};
+
 export default function Profile() {
   const { user } = useAuth(); // Pegando os dados do usuário do AuthContext
-  const [cep, setCep] = useState({});
+  const [cep, setCep] = useState<CepType | null>(null);
 
   useEffect(() => {
     const searchCep = async () => {
@@ -48,7 +53,9 @@ export default function Profile() {
           </div>
           <div className={styles.infoDiv}>
             <p className={styles.p}>Data de nascimento: {user?.dataDeNascimento}</p>
-            <p className={styles.p}>Bairro: {cep.neighborhood || "Bairro não encontrado"}</p>
+            <p className={styles.p}>
+              Bairro: {cep?.neighborhood || "Bairro não encontrado"}
+            </p>
             <p className={styles.p}>Email: {user?.email}</p>
           </div>
         </div>

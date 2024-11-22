@@ -7,8 +7,26 @@ import { useRouter } from 'next/navigation';
 import styles from './page.module.css'; 
 import logo from "../../assets/logo.png"; 
 import { Button } from '../Button/Button';
+import { Url } from 'next/dist/shared/lib/router/router';
+import router from 'next/router';
 
-const menuItemsOut = [
+interface MenuItem {
+  label: string;
+  type: 'text' | 'button';
+  href?: string;
+  variant?: "outline" | "primary" | "secondary" | undefined;
+  borderColor?: string;
+  color?: string;
+  size?: 'small' | 'medium' | 'large';
+  backgroundColor?: string;
+  width?: string;
+  height?: string;
+  onClick?: () => void;
+}
+
+interface HeaderProps {}
+
+const menuItemsOut: MenuItem[] = [
   { label: "Ranking verde", type: "text", href: "/ranking-green-companies" },
   { label: "Sobre nós", type: "text", href: "/about" },
   { 
@@ -30,7 +48,7 @@ const menuItemsOut = [
   },
 ];
 
-const menuItemsIn = [
+const menuItemsIn: MenuItem[] = [
   { label: "Menu", type: "text", href: "/home" },
   { label: "Conteudo educativo", type: "text", href: "/educational-content" },
   { 
@@ -55,17 +73,17 @@ const menuItemsIn = [
   },
 ];
 
-export const Header = () => {
+export const Header: React.FC<HeaderProps> = () => {
   const { isAuthenticated, logout } = useAuth(); 
   const router = useRouter(); 
 
-  const handleLogout = () => {
+  const handleLogout = (): void => {
     logout();
     localStorage.clear(); 
     router.push('/login');  
   };
 
-  const renderButton = (item) => {
+  const renderButton = (item: MenuItem): JSX.Element => {
     const buttonProps = {
       label: item.label,
       color: item.color || '#fff',  
@@ -91,49 +109,55 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.navBar}>
-      
-          <Image src={logo} alt="Logo" width={70} height={70} className={styles.img}/>
-        
+        <Image src={logo} alt="Logo" width={70} height={70} className={styles.img} />
         <ul className={styles.ul}>
-        {isAuthenticated ? (
-  <>
-    {menuItemsIn.map((item, index) => (
-      <li className={styles.StyledLi} key={index}>
-        {item.type === "button" ? (
-          renderButton(item)  
-        ) : (
-          <Link href={item.href} prefetch={true}>
-            <span>{item.label}</span>
-          </Link>
-        )}
-      </li>
-    ))}
-    <li className={styles.StyledLi}>
-      <Button 
-      label='Sair'
-      backgroundColor='#195C18'
-      size='large'
-      onClick={handleLogout}
-      >
-        Sair
-      </Button>
-    </li>
-  </>
-) : (
-  <>
-    {menuItemsOut.map((item, index) => (
-      <li className={styles.StyledLi} key={index}>
-        {item.type === "button" ? (
-          renderButton(item)  
-        ) : (
-          <Link href={item.href} prefetch={true}>
-            <span>{item.label}</span>
-          </Link>
-        )}
-      </li>
-    ))}
-  </>
-)}
+          {isAuthenticated ? (
+            <>
+              {menuItemsIn.map((item, index) => (
+                <li className={styles.StyledLi} key={index}>
+                  {item.type === "button" ? (
+                    renderButton(item)  
+                  ) : (
+                    item.href ? (
+                      <Link href={item.href} prefetch={true}>
+                        <span>{item.label}</span>
+                      </Link>
+                    ) : (
+                      <span>{item.label}</span>
+                    )
+                  )}
+                </li>
+              ))}
+              <li className={styles.StyledLi}>
+                <Button 
+                  label='Sair'
+                  backgroundColor='#195C18'
+                  size='large'
+                  onClick={handleLogout}
+                >
+                  Sair
+                </Button>
+              </li>
+            </>
+          ) : (
+            <>
+              {menuItemsOut.map((item, index) => (
+                <li className={styles.StyledLi} key={index}>
+                  {item.type === "button" ? (
+                    renderButton(item)  
+                  ) : (
+                    item.href ? (
+                      <Link href={item.href} prefetch={true}>
+                        <span>{item.label}</span>
+                      </Link>
+                    ) : (
+                      <span>{item.label}</span>
+                    )
+                  )}
+                </li>
+              ))}
+            </>
+          )}
         </ul>
       </nav>
     </header>
