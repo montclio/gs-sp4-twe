@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
 
-<<<<<<< HEAD
 type User = {
   nome: string;
   sobrenome: string;
@@ -9,21 +8,11 @@ type User = {
   cep?: string; 
 };
 
-=======
-interface User {
-  nome: string;
-  email: string;
-}
->>>>>>> 2796b7abe4736e76b10b1ee12bc622250b204ad2
 
 interface AuthContextProps {
   isAuthenticated: boolean;
   user: User | null;
-<<<<<<< HEAD
   login: (user: User) => void; // Alterado para aceitar um objeto de usuári
-=======
-  login: (user: User) => void; // Alterado para aceitar um objeto de usuário
->>>>>>> 2796b7abe4736e76b10b1ee12bc622250b204ad2
   logout: () => void;
 }
 

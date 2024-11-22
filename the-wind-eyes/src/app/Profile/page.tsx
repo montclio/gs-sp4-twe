@@ -5,7 +5,6 @@ import userIcon from "../assets/userIcon.png";
 import { useEffect, useState } from "react";
 import { useAuth } from "../../../Context/AuthContext"; // Importando o AuthContext
 import { ContentParagraph } from "../components/ContentParagraph/ContentParagraph";
-<<<<<<< HEAD
 
 // Definindo o tipo para o CEP
 type CepType = {
@@ -15,12 +14,6 @@ type CepType = {
 export default function Profile() {
   const { user } = useAuth(); // Pegando os dados do usuário do AuthContext
   const [cep, setCep] = useState<CepType | null>(null);
-=======
-
-export default function Profile() {
-  const { user } = useAuth(); // Pegando os dados do usuário do AuthContext
-  const [cep, setCep] = useState({});
->>>>>>> 2796b7abe4736e76b10b1ee12bc622250b204ad2
 
   useEffect(() => {
     const searchCep = async () => {
@@ -60,13 +53,9 @@ export default function Profile() {
           </div>
           <div className={styles.infoDiv}>
             <p className={styles.p}>Data de nascimento: {user?.dataDeNascimento}</p>
-<<<<<<< HEAD
             <p className={styles.p}>
               Bairro: {cep?.neighborhood || "Bairro não encontrado"}
             </p>
-=======
-            <p className={styles.p}>Bairro: {cep.neighborhood || "Bairro não encontrado"}</p>
->>>>>>> 2796b7abe4736e76b10b1ee12bc622250b204ad2
             <p className={styles.p}>Email: {user?.email}</p>
           </div>
         </div>

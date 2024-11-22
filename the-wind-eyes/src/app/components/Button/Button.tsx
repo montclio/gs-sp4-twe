@@ -13,14 +13,9 @@ interface ButtonProps {
   backgroundColor?: string;
   borderColor?: string;
   style?: React.CSSProperties;
-<<<<<<< HEAD
   width?: string;
   height?: string;
   children?: React.ReactNode;  // Adicionando children
-=======
-  width?: string; 
-  height?: string; 
->>>>>>> 2796b7abe4736e76b10b1ee12bc622250b204ad2
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -32,14 +27,9 @@ export const Button: React.FC<ButtonProps> = ({
   backgroundColor,
   borderColor,
   style,
-<<<<<<< HEAD
   width,
   height,
   children, // Recebe o conteúdo de children
-=======
-  width, 
-  height, 
->>>>>>> 2796b7abe4736e76b10b1ee12bc622250b204ad2
 }) => {
   const getButtonStyle = () => {
     let baseStyle: React.CSSProperties = {
@@ -53,13 +43,8 @@ export const Button: React.FC<ButtonProps> = ({
       fontFamily: 'Roboto, sans-serif',
       fontSize: '1rem',
       fontWeight: 'bold',
-<<<<<<< HEAD
       width,
       height,
-=======
-      width, 
-      height, 
->>>>>>> 2796b7abe4736e76b10b1ee12bc622250b204ad2
     };
 
     if (size === 'small') baseStyle.padding = '0.5rem 0.6rem';
