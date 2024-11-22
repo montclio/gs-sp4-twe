@@ -103,11 +103,11 @@
     padding: 2rem;
   }
   .ul {
-    width: 50%;
-  }
+    width: 6%;
+  } 
   .img {
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
   }
   .StyledLi{
     font-size: 1.5rem;
@@ -121,11 +121,11 @@
     padding: 2rem;
   }
   .img {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
   }
   .ul {
-    width: 40%;
+    width: 60%;
     
   }
 }

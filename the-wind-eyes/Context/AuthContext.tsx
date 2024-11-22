@@ -1,14 +1,18 @@
 import React, { createContext, useContext, useState } from 'react';
 
-interface User {
+type User = {
   nome: string;
+  sobrenome: string;
   email: string;
-}
+  dataDeNascimento?: string; 
+  cep?: string; 
+};
+
 
 interface AuthContextProps {
   isAuthenticated: boolean;
   user: User | null;
-  login: (user: User) => void; // Alterado para aceitar um objeto de usuário
+  login: (user: User) => void; // Alterado para aceitar um objeto de usuári
   logout: () => void;
 }
 
