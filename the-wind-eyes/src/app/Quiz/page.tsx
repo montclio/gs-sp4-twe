@@ -1,6 +1,16 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
+import axios from 'axios';
+
+const fetchData = async (idUsuario) => {
+  try {
+      const response = await axios.get(`http://localhost:8080/usuario/${idUsuario}`);
+      console.log(response.data);
+  } catch (error) {
+      console.error('Erro ao Buscar usuário :', error);
+  }
+};
 
 const quizData = [
     {
