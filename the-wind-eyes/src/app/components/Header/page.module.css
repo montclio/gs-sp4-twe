@@ -103,11 +103,19 @@
     padding: 2rem;
   }
   .ul {
+<<<<<<< HEAD
     width: 6%;
   } 
   .img {
     width: 3rem;
     height: 3rem;
+=======
+    width: 50%;
+  }
+  .img {
+    width: 5rem;
+    height: 5rem;
+>>>>>>> 2796b7abe4736e76b10b1ee12bc622250b204ad2
   }
   .StyledLi{
     font-size: 1.5rem;
@@ -121,11 +129,19 @@
     padding: 2rem;
   }
   .img {
+<<<<<<< HEAD
     width: 4rem;
     height: 4rem;
   }
   .ul {
     width: 60%;
+=======
+    width: 5rem;
+    height: 5rem;
+  }
+  .ul {
+    width: 40%;
+>>>>>>> 2796b7abe4736e76b10b1ee12bc622250b204ad2
     
   }
 }

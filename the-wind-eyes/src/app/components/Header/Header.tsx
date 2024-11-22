@@ -109,7 +109,13 @@ export const Header: React.FC<HeaderProps> = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.navBar}>
+<<<<<<< HEAD
         <Image src={logo} alt="Logo" width={70} height={70} className={styles.img} />
+=======
+      
+          <Image src={logo} alt="Logo" width={70} height={70} className={styles.img}/>
+        
+>>>>>>> 2796b7abe4736e76b10b1ee12bc622250b204ad2
         <ul className={styles.ul}>
           {isAuthenticated ? (
             <>
