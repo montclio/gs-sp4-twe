@@ -2,7 +2,7 @@ import { Apresentation } from './components/Apresentation/Apresentation'
 import { Button } from './components/Button/Button'
 import { ContentParagraph } from './components/ContentParagraph/ContentParagraph'
 import styles from './page.module.css'
-
+//LINK VIDEO YOUTUBE: https://youtu.be/FRsyQVUU4jM
 export default function LandingPage() {
   return (
     <>
