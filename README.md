@@ -27,3 +27,7 @@ Para conferir a integração com a API de Java, - localmente - faça os seguinte
 2. Baixar as Dependências no arquivo "pom.xml"
 3. Atualizar o projeto
 4.  Executar a Classe Main
+
+
+##Link video youtube: https://youtu.be/FRsyQVUU4jM?si=GwomgQ-R59P4bTwj
+Link api de python: https://github.com/Vitor4818/api-gs-the-wind-eyes
