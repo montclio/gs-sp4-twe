@@ -7,7 +7,6 @@ import { useRouter } from 'next/navigation';
 import styles from './page.module.css'; 
 import logo from "../../assets/logo.png"; 
 import { Button } from '../Button/Button';
-import { Url } from 'next/dist/shared/lib/router/router';
 import router from 'next/router';
 
 interface MenuItem {
@@ -28,11 +27,11 @@ interface HeaderProps {}
 
 const menuItemsOut: MenuItem[] = [
   { label: "Ranking verde", type: "text", href: "/ranking-green-companies" },
-  { label: "Sobre nós", type: "text", href: "/about" },
+  { label: "Sobre nós", type: "text", href: "/About" },
   { 
     label: "Entrar", 
     type: "button", 
-    href: "/login", 
+    href: "/Login", 
     variant: "outline", 
     borderColor: "#195C18", 
     color: "#195C18", 
@@ -49,27 +48,27 @@ const menuItemsOut: MenuItem[] = [
 ];
 
 const menuItemsIn: MenuItem[] = [
-  { label: "Menu", type: "text", href: "/home" },
+  { label: "Menu", type: "text", href: "/Home" },
   { label: "Conteudo educativo", type: "text", href: "/educational-content" },
   { 
     label: "Quiz", 
     type: "button", 
-    href: "/quiz", 
+    href: "/Quiz", 
     variant: "outline", 
     borderColor: "#195C18", 
     color: "#195C18", 
     size: "large", 
-    onClick: () => router.push("/quiz"), 
+    onClick: () => router.push("/Quiz"), 
   },
   { 
     label: "Perfil", 
     type: "button", 
-    href: "/profile", 
+    href: "/Profile", 
     variant: "outline", 
     borderColor: "#195C18", 
     color: "#195C18", 
     size: "large", 
-    onClick: () => router.push("/profile"), 
+    onClick: () => router.push("/Profile"), 
   },
 ];
 
@@ -80,7 +79,7 @@ export const Header: React.FC<HeaderProps> = () => {
   const handleLogout = (): void => {
     logout();
     localStorage.clear(); 
-    router.push('/login');  
+    router.push('/Login');  
   };
 
   const renderButton = (item: MenuItem): JSX.Element => {

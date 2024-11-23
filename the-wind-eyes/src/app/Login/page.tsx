@@ -4,12 +4,13 @@ import { Button } from "../components/Button/Button";
 import Input from "../components/Input/Input";
 import styles from "./page.module.css";
 import { useRouter } from 'next/navigation';
-import { useAuth } from '../../../Context/AuthContext';
+import { useAuth } from '../../../Context/AuthContext'; // Importando o hook useAuth
 
 export default function Login() {
   const router = useRouter();
-  const { login } = useAuth();
-  const [email, setEmail] = useState('');
+  const { login } = useAuth(); // Pegando a função login do contexto
+  
+  const [email, setEmail] = useState(''); // Usando email em vez de username
   const [senha, setSenha] = useState('');
   const [error, setError] = useState('');
 
@@ -33,7 +34,7 @@ export default function Login() {
         // Usando o login do contexto e passando o objeto de exemplo
         login(user);
         setError(''); // Limpando qualquer erro anterior
-        router.push('/home');  // Redireciona após o login bem-sucedido
+        router.push('/Home');  // Redireciona após o login bem-sucedido
       } catch (error) {
         console.error('Login failed:', error);
         setError('Erro ao tentar fazer login');
@@ -78,6 +79,7 @@ export default function Login() {
               backgroundColor="#195C18"
               width="10rem"
               height="3rem"
+              onClick={() => router.push('/sign-up')}
             />
           </div>
         </div>

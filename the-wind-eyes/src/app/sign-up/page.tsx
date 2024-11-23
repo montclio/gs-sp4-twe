@@ -3,11 +3,12 @@ import { useState } from "react";
 import { Button } from "../components/Button/Button";
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
-import axios from 'axios';
+import { useAuth } from "../../../Context/AuthContext"; // Importando o contexto
 import Input from '../components/Input/Input';
 
 export default function SignUp() {
   const router = useRouter();
+  const { login } = useAuth(); // Pega a função de login do AuthContext
 
   const [birthdayDate, setBirthdayDate] = useState("");
   const [cep, setCep] = useState("");
@@ -33,6 +34,12 @@ export default function SignUp() {
       return false;
     }
 
+    // Validação da data de nascimento (formato DD/MM/AAAA)
+    const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;
+    if (!birthdayDate.trim() || !dateRegex.test(birthdayDate)) {
+      alert("Por favor, preencha a data de nascimento no formato DD/MM/AAAA.");
+      return false;
+    }
 
     // Validação do CEP (com ou sem traço)
     const cepRegex = /^\d{5}-?\d{3}$/;
@@ -57,22 +64,18 @@ export default function SignUp() {
 
     const user = {
       nome,
+      cep,
       sobrenome,
       email: signUpEmail,
       dataDeNascimento: birthdayDate,
-      cep,
       senha,
     };
-    
-    try {
-      const response = await axios.post('http://localhost:8080/usuario', user);
-      console.log('Usuário cadastrado com sucesso:', response.data);
-      alert('Usuário cadastrado com sucesso!');
-      router.push('/home');
-    } catch (error) {
-      console.error('Erro ao cadastrar usuário:', error);
-      alert('Ocorreu um erro ao cadastrar o usuário. Tente novamente.');
-    }
+
+    // Chama o login passando o objeto do usuário
+    login(user);
+
+    alert("Cadastro realizado com sucesso!");
+    router.push("/Home"); // Redireciona para o perfil sem parâmetros de URL
   };
 
   return (
@@ -125,7 +128,7 @@ export default function SignUp() {
               backgroundColor="#51E54F"
               width="20rem"
               height="3rem"
-              onClick={handleSignUp}
+              onClick={handleSignUp} // Chama handleSignUp ao clicar
             />
             <span className={styles.span}>OU</span>
             <Button
@@ -133,7 +136,7 @@ export default function SignUp() {
               backgroundColor="#195C18"
               width="20rem"
               height="3rem"
-              onClick={() => router.push('/login')}
+              onClick={() => router.push('/Login')} // Redirecionamento para login
             />
           </div>
         </div>
